@@ -1,5 +1,6 @@
 /* (c) Magnus Auvinen. See licence.txt in the root of the distribution for more information. */
 /* If you are missing that file, acquire a complete release at teeworlds.com.                */
+/* modified by xx11org, im hate zlib >:( please buy me a chicory 						     */
 #include "gamecontext.h"
 
 #include "entities/character.h"
@@ -8,7 +9,7 @@
 #include "player.h"
 #include "score.h"
 #include "teeinfo.h"
-
+#include "gamemodes/xfng2.h"
 #include <antibot/antibot_data.h>
 
 #include <base/aio.h>
@@ -4237,6 +4238,8 @@ void CGameContext::OnInit(const void *pPersistentData)
 
 	if(!str_comp(Config()->m_SvGametype, "mod"))
 		m_pController = new CGameControllerMod(this);
+	else if(!str_comp_nocase(Config()->m_SvGametype, "xfng2"))
+		m_pController = new CGameControllerXFNG2(this);
 	else
 		m_pController = new CGameControllerDDNet(this);
 

@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.12...3.27.4)
 
 # In-source builds writes into src/generated, causing out-of-date files to be reused in later builds
+# yea modifed by xx11org
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
   message(FATAL_ERROR
     "In-source builds are not supported. To build out of source:\n"
@@ -3166,6 +3167,8 @@ if(SERVER)
     gamecontroller.h
     gamemodes/ddnet.cpp
     gamemodes/ddnet.h
+    gamemodes/xfng2.cpp
+    gamemodes/xfng2.h
     gamemodes/mod.cpp
     gamemodes/mod.h
     gameworld.cpp
@@ -3189,6 +3192,7 @@ if(SERVER)
     teehistorian.h
     teeinfo.cpp
     teeinfo.h
+    xfn2define.h
     # tidy-alphabetical-end
   )
   set(GAME_GENERATED_SERVER
