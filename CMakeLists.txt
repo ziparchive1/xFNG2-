@@ -3192,7 +3192,7 @@ if(SERVER)
     teehistorian.h
     teeinfo.cpp
     teeinfo.h
-    xfn2define.h
+    xfng2define.h
     # tidy-alphabetical-end
   )
   set(GAME_GENERATED_SERVER
